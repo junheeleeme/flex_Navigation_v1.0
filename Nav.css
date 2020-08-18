@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+ background-color : #cff1ef;
+}
+
+a{
+    text-decoration: none;
+    color : white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbcffc;
+    padding: 8px 12px;
+}
+
+.navbar_logo{
+    font-size: 30px;
+    color : white;
+}
+
+.navbar_logo i {
+    color : #ffeb3b
+    font-size: 25px;
+}
+
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+        margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.navbar_menu li {
+    padding:  8px 12px;
+}
+
+.navbar_icons{
+
+    list-style: none;
+    color : white;
+    display: flex;
+    padding-left: 0;
+}
+
+
+.navbar_icons li{
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{
+    background-color: #be79df;
+    border-radius: 4px;
+}
+
+.navbar_toogleBtn{
+    position :absolute;
+    right : 20px;
+    font-size : 24px;
+    color :beige;
+    display: none;
+}
+
+/*반응형 설정*/
+@media screen and (max-width : 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width : 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons{
+        display: none;
+        justify-content: center;
+        width : 100%; //justify-content : center 을 사용하면 width: 100% 를 사용해야한다.
+    }
+
+    .navbar_toogleBtn{
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+
+}
